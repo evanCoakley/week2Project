@@ -6,41 +6,59 @@ console.log(data);
 
 
 
+
 // 1: Show me how to calculate the average price of all items.
-function question1 () {
-  // Answer:
+function question1() {
+  let totalPrice = 0;
+  for (let i = 0; i < data.length; i++) {
+    totalPrice += data[i].price
+  }
+  let avg = totalPrice / data.length;
+  let avgPrice = Math.round(avg * 100) / 100;
+
+  console.log("The average price is $" + avgPrice);
+
+
 }
 
 
 
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
-function question2 () {
+function question2() {
+  let specVal = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].price >= 14 && data[i].price <= 18) {
+      specVal.push(data[i].title);
+    }
+  }
+
+  console.log(specVal);
   // Answer:
 }
 
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
-function question3 () {
+function question3() {
   // Answer:
 }
 
 
 // 4: Display a list of all items who are made of wood.
-function question4 () {
+function question4() {
   // Answer:
 }
 
 
 // 5: Which items are made of eight or more materials? 
 //    Display the name, number of items and the items it is made of.
-function question5 () {
+function question5() {
   // Answer:
 }
 
 
 // 6: How many items were made by their sellers?
 // Answer:
-function question6 () {
+function question6() {
   // Answer:
 }
