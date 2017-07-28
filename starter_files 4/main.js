@@ -32,21 +32,35 @@ function question2() {
     }
   }
 
-  console.log(specVal);
-  // Answer:
+  console.log(specVal.join("\n"));
+  // An
 }
 
 
 
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3() {
+
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].currency_code === "GBP") {
+      console.log(data[i].title + "costs " + data[i].price + " pounds.");
+    }
+
+  }
   // Answer:
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4() {
-  // Answer:
+  let wooditems = []
+
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].materials.indexOf("wood") > -1) {
+      wooditems.push(data[i]);
+    }
+  }
+  console.log(wooditems);
 }
 
 
