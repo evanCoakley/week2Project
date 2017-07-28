@@ -57,16 +57,18 @@ function question4() {
 
   for (let i = 0; i < data.length; i++) {
     if (data[i].materials.indexOf("wood") > -1) {
-      wooditems.push(data[i]);
+      wooditems.push(data[i].title + "is made of wood.");
+
     }
   }
-  console.log(wooditems);
+  console.log(wooditems.join("\n"));
 }
 
 
 // 5: Which items are made of eight or more materials? 
 //    Display the name, number of items and the items it is made of.
 function question5() {
+  let eightPlus[]
   // Answer:
 }
 
