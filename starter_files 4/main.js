@@ -68,15 +68,23 @@ function question4() {
 // 5: Which items are made of eight or more materials? 
 //    Display the name, number of items and the items it is made of.
 function question5() {
-  // Answer:
-  var num_materials;
+
+  var num_materials = [];
   for (i = 0; i < data.length; i++) {
+    let obj = {}
     if (data[i].materials.length >= 8) {
-      console.log(data[i].title);
-      console.log(data[i].materials.length);
-      console.log(data[i].materials);
+      obj.title = data[i].title;
+      obj.materialsLength = data[i].materials.length;
+      obj.materials = data[i].materials;
+
+      num_materials.push(obj);
     }
   }
+  console.log(num_materials[0].title + "has " + num_materials[0].materialsLength + " materials:");
+  console.log("- " + num_materials[0].materials.join("\n" + "- "));
+  console.log(num_materials[1].title + "has " + num_materials[1].materialsLength + " materials:");
+  console.log("- " + num_materials[1].materials.join("\n" + "- "));
+
 }
 
 
@@ -89,7 +97,8 @@ function question6() {
     if (data[i].who_made === "i_did") {
       seller_items++;
     }
-    console.log(seller_items);
+
   }
+  console.log(seller_items);
   // Answer:
 }
